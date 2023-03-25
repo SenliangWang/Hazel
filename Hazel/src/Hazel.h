@@ -6,7 +6,7 @@
 
 // FOR USE BY OTHER APPLICATIONS
 #include "Hazel/Application.h"
-#include "Hazel/Log.h"
+#include "Hazel/Log.h" 
 
 // ---- Entry Point ----
 // Main function
