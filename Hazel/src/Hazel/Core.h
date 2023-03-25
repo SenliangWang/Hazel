@@ -2,7 +2,7 @@
 
 // 定义了一些helper性质的macro(宏指令)
 
-#ifdef HZ_PLATFORM_WINDOWS
+#ifdef HZ_PLATFORM_WINDOWS 
 	#ifdef HZ_BUILD_DLL
 		#define HAZEL_API __declspec(dllexport)
 	#else
