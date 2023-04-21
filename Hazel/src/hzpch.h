@@ -1,4 +1,5 @@
 #pragma once
+// ‘§±‡“ÎÕ∑
 
 #include <iostream>
 #include <memory>

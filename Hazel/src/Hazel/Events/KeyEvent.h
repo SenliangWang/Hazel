@@ -10,6 +10,7 @@ namespace Hazel {
 		inline int GetKeyCode() const { return m_KeyCode; }
 
 		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
+		
 	protected:
 		KeyEvent(int keycode)
 			: m_KeyCode(keycode) {}
@@ -31,8 +32,16 @@ namespace Hazel {
 			ss << "KeyPressedEvent: " << m_KeyCode << " (" << m_RepeatCount << " repeats)";
 			return ss.str();
 		}
-
-		EVENT_CLASS_TYPE(KeyPressed)
+	    // EVENT_CLASS_TYPE(KeyPressed)
+		static EventType GetStaticType() {
+			return EventType::KeyPressed;
+		} 
+		virtual EventType GetEventType() const override {
+			return GetStaticType();
+		} 
+		virtual const char* GetName() const override {
+			return "KeyPressed";
+		}
 	private:
 		int m_RepeatCount;
 	};
