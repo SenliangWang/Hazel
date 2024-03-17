@@ -2,6 +2,7 @@
 
 #ifdef  HZ_PLATFORM_WINDOWS
 
+// 需要使用 extern 来告诉编译器该函数是在其他文件中定义的
 extern  Hazel::Application*   Hazel::CreateApplication();
 
 int main(int argc, char* argv[]) {
